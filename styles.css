@@ -1,0 +1,128 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+header a{
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav {
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.info-block {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.info-block h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info-block p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.info-block-content {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.cookie-img {
+    width: 100px;
+    animation: rotate .2s linear infinite;
+} 
+
+ 
+@keyframes rotate {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+#cookie-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cookie-list li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#cookie-list img {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    margin-left: 10px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    opacity: 0;
+    transform: scale(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    animation: unscale .1s linear;
+}
+
+#cookie-list li:hover img {
+    display: inline-block;
+    opacity: 1;
+    transform: scale(1.1);
+    animation: scale .1s linear;
+}
+
+@keyframes scale {
+    0% { transform: scale(.1); }
+    100% { transform: scale(1.1); }
+}
+
+@keyframes unscale {
+    0% { transform: scale(1.1); }
+    100% { transform: scale(0); display: none;}
+}
